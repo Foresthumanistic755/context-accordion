@@ -2,7 +2,7 @@
   "name": "context-accordion",
   "version": "0.1.0",
   "description": "Token-efficient, layered context delivery for AI agents. Context is always available — just collapsed by default.",
-  "author": "Harbor Office",
+  "author": "AVANT-ICONIC",
   "license": "MIT",
   "keywords": [
     "ai",
@@ -62,7 +62,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build && npm run test"
+    "prepublishOnly": "npm run build && npm run test",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "uuid": "^9.0.0"
@@ -84,18 +85,19 @@
     "vitest": "^1.0.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "npm": ">=9"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/harbor-office/context-accordion.git"
+    "url": "git+https://github.com/AVANT-ICONIC/context-accordion.git"
   },
-  "homepage": "https://github.com/harbor-office/context-accordion#readme",
+  "homepage": "https://github.com/AVANT-ICONIC/context-accordion#readme",
   "bugs": {
-    "url": "https://github.com/harbor-office/context-accordion/issues"
+    "url": "https://github.com/AVANT-ICONIC/context-accordion/issues"
   },
   "funding": {
     "type": "github",
-    "url": "https://github.com/sponsors/harbor-office"
+    "url": "https://github.com/sponsors/AVANT-ICONIC"
   }
 }
