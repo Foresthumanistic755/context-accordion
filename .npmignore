@@ -1,0 +1,8 @@
+src/
+tests/
+*.test.ts
+*.spec.ts
+tsup.config.ts
+tsconfig.json
+todo.md
+.github/
