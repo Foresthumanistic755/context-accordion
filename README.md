@@ -35,11 +35,11 @@
   ·
   <a href="#quick-start">Quick Start</a>
   ·
-  <a href="#api">API Reference</a>
+  <a href="#api-reference">API Reference</a>
   ·
-  <a href="https://github.com/harbor-office/context-accordion/discussions">Discussions</a>
+  <a href="https://github.com/AVANT-ICONIC/context-accordion/discussions">Discussions</a>
   ·
-  <a href="https://github.com/harbor-office/context-accordion/issues">Issues</a>
+  <a href="https://github.com/AVANT-ICONIC/context-accordion/issues">Issues</a>
 </p>
 
 </div>
@@ -250,6 +250,19 @@ new AccordionComposer(config?)
 - `render(bundle)` — Render to string
 - `index(options)` — Store task in archive
 - `clearSessionCache()` — Clear session cache
+
+---
+
+## Contributing
+
+PRs and issues welcome. Please open an [issue](https://github.com/AVANT-ICONIC/context-accordion/issues) before sending a large PR so we can align on direction.
+
+```bash
+git clone https://github.com/AVANT-ICONIC/context-accordion.git
+cd context-accordion
+npm install
+npm run test
+```
 
 ---
 
