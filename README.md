@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:000000,40:7f1d1d,75:ea580c,100:f59e0b&text=CONTEXT%20ACCORDION&fontColor=ffffff&fontSize=48&fontAlignY=35&desc=by%20HARBOR&descSize=15&descAlignY=52&animation=scaleIn" alt="Header" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:000000,40:7f1d1d,75:ea580c,100:f59e0b&text=CONTEXT%20ACCORDION&fontColor=ffffff&fontSize=48&fontAlignY=35&desc=by%20AVANT-ICONIC&descSize=15&descAlignY=52&animation=scaleIn" alt="Header" width="100%" />
 
 <br />
 
@@ -258,8 +258,6 @@ new AccordionComposer(config?)
 MIT — see [LICENSE](./LICENSE)
 
 ---
-
-## Built by AVANT-ICONIC
 
 Built by [AVANT-ICONIC](https://avant-iconic.com). Inspired by the problem of agents drowning in context they didn't ask for.
 
