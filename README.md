@@ -11,10 +11,10 @@
 
 <p align="center">
   <a href="#the-problem"><img src="https://img.shields.io/badge/the%20problem-7f1d1d?style=for-the-badge&logo=readme&logoColor=white" alt="The Problem" /></a>
-  <a href="#the-solution"><img src="https://img.shields.io/badge/the%20solution-c2410c?style=for-the-badge&logo=lightbulb&logoColor=white" alt="The Solution" /></a>
+  <a href="#the-solution-context-accordion"><img src="https://img.shields.io/badge/the%20solution-c2410c?style=for-the-badge&logo=lightbulb&logoColor=white" alt="The Solution" /></a>
   <a href="#quick-start"><img src="https://img.shields.io/badge/quick%20start-ea580c?style=for-the-badge&logo=rocket&logoColor=white" alt="Quick Start" /></a>
-  <a href="#api"><img src="https://img.shields.io/badge/api-d97706?style=for-the-badge&logo=code&logoColor=white" alt="API" /></a>
-  <a href="#adapters"><img src="https://img.shields.io/badge/adapters-f59e0b?style=for-the-badge&logo=plug&logoColor=white" alt="Adapters" /></a>
+  <a href="#api-reference"><img src="https://img.shields.io/badge/api-d97706?style=for-the-badge&logo=code&logoColor=white" alt="API" /></a>
+  <a href="#framework-adapters"><img src="https://img.shields.io/badge/adapters-f59e0b?style=for-the-badge&logo=plug&logoColor=white" alt="Adapters" /></a>
   <a href="#contributing"><img src="https://img.shields.io/badge/contributing-fbbf24?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Contributing" /></a>
 </p>
 
