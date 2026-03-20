@@ -33,6 +33,11 @@ export class AccordionComposer {
 
   /**
    * Creates a new AccordionComposer instance.
+   * 
+   * **Alpha Status:** This package is in alpha (0.x.x). The API may change in breaking
+   * ways until version 1.0.0. For Harbor integration stability, pin to a specific
+   * version tag and use the official framework adapters.
+   * 
    * @param config - Optional configuration object for customizing composer behavior
    */
   constructor(config: AccordionConfig = {}) {
@@ -46,6 +51,11 @@ export class AccordionComposer {
 
   /**
    * Builds a complete accordion bundle for an agent run.
+   * 
+   * **Error Handling:** This method never throws. If a tier cannot be loaded
+   * (e.g., experience.md not found), it is silently skipped. The returned bundle
+   * will contain only the tiers that could be successfully assembled.
+   * 
    * @param agent - The agent configuration including identity and experience settings
    * @param task - The task context containing title, description, and related metadata
    * @param options - Optional composition options for customizing bundle generation
@@ -109,6 +119,11 @@ export class AccordionComposer {
 
   /**
    * Expands an existing accordion bundle with additional tiers on-demand.
+   * 
+   * **Error Handling:** This method never throws. If expansion fails (e.g., file not found,
+   * vector store unreachable), the original bundle is returned with a logged expansion event.
+   * The `tokensAdded` field will be 0 to indicate no new content was added.
+   * 
    * @param bundle - The existing accordion bundle to expand
    * @param options - Expansion options specifying tier, reason, and optional settings
    * @returns A promise that resolves to the expanded AccordionBundle
@@ -190,24 +205,24 @@ export class AccordionComposer {
         }
       } else if (options.tier === 'archive') {
         const task = { id: bundle.taskId ?? '', title: options.reason }
-        const packets = await this.retrieveArchive(task, options.limit ?? 3)
-          if (packets.length > 0) {
-            const packet = packets[0]
-            const tierExists = bundle.packets.some(p => p.tier === packet.tier)
-            if (tierExists) {
-              const event: ExpansionEvent = {
-                tier: options.tier,
-                reason: options.reason,
-                tokensAdded: 0,
-                timestamp: new Date(),
-              }
-              this.config.onExpand?.(event)
-              
-              return {
-                ...bundle,
-                expansionLog: [...bundle.expansionLog, event],
-              }
+        const archivePackets = await this.retrieveArchive(task, options.limit ?? 3)
+        if (archivePackets.length > 0) {
+          const packet = archivePackets[0]
+          const tierExists = bundle.packets.some(p => p.tier === packet.tier)
+          if (tierExists) {
+            const event: ExpansionEvent = {
+              tier: options.tier,
+              reason: options.reason,
+              tokensAdded: 0,
+              timestamp: new Date(),
             }
+            this.config.onExpand?.(event)
+            
+            return {
+              ...bundle,
+              expansionLog: [...bundle.expansionLog, event],
+            }
+          }
           
           this.sessionCache.set(cacheKey, packet)
           const tokensAdded = estimateTokens(packet.content)
@@ -275,6 +290,9 @@ export class AccordionComposer {
 
   /**
    * Renders an accordion bundle into a single prompt string.
+   * 
+   * **Error Handling:** This method never throws.
+   * 
    * @param bundle - The accordion bundle to render
    * @returns A string containing all packet contents joined together
    */
@@ -291,6 +309,10 @@ export class AccordionComposer {
 
   /**
    * Indexes a completed task into the vector archive for future retrieval.
+   * 
+   * **Error Handling:** This method never throws. If the vector store is not configured
+   * or is unreachable, indexing is silently skipped.
+   * 
    * @param options - The indexing options containing task content, ID, and metadata
    * @returns A promise that resolves when indexing is complete
    */
