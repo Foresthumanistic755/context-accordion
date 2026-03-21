@@ -89,12 +89,24 @@ export interface VectorStoreConfig {
   vectorSize?: number             // default: 1536
 }
 
+/**
+ * Tokenizer function type for custom token estimation.
+ * Returns the estimated token count for the given text.
+ */
+export type Tokenizer = (text: string) => number
+
 export interface AccordionConfig {
   maxTokens?: number              // global default (default: 8000)
   cacheTtl?: number               // ms (default: 300_000 = 5 min)
+  cacheMaxSize?: number           // max static cache entries (default: 1000)
   vectorStore?: VectorStoreConfig
   embeddingProvider?: EmbeddingProvider
   onExpand?: (event: ExpansionEvent) => void
+  /**
+   * Custom tokenizer for token estimation.
+   * Defaults to character-based approximation (4 chars = 1 token).
+   */
+  tokenizer?: Tokenizer
 }
 
 export interface IndexTaskOptions {
